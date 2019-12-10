@@ -18,7 +18,7 @@ $ git config --global user.email "whatisname@gmail.com"
 
 ``` 
 $ git add [파일/폴더명]
-$ git commit 
+$ git commit -m "added 파일명"
 $ git push origin master
 ```
 

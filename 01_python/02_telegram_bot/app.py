@@ -55,9 +55,23 @@ def telegram():
             #개발자센터의 주소를 받아오면서 헤더정보와 data정보를 같이 넘겨주도록 한다.
             papago_res = requests.post('https://openapi.naver.com/v1/papago/n2mt', headers=headers, data=data)
             text = papago_res.json().get('message').get('result').get('translatedText')
-
         requests.get(f'{base}/bot{token}/sendMessage?chat_id={chat_id}&text={text}')
 
+       
+
+
+        # if text[0:4] == '/로또 ': 
+        #     num = text[4:]
+        #     res = requests.get(f'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwtNo={num}')
+        #     lotto = res.json()
+
+        #     winner = []
+        #     for i in range(1,7):
+        #         winner.append(lotto[f'drwtNo{i}'])
+        #     bonus_num =lotto['bnusNo']
+        #     text = f'{num}회차 로또 당첨번호는 {winner}입니다.'
+
+         
     return '', 200
 
 
